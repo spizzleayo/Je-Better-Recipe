@@ -1,0 +1,74 @@
+ //cuisine
+ const cuisine =
+ `cuisine=african,american&number=20`;
+
+   const cuisineURL = () => 
+ `https://api.spoonacular.com/recipes/complexSearch&apiKey=fc36a20745294176a54a31a6d1f36341&${cuisine}`;
+
+
+ console.log(cuisineURL());
+
+
+
+
+
+ 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
