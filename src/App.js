@@ -1,17 +1,14 @@
-import React, {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
-import {loadCuisine} from './actions/cuisineAction';
+import React from 'react';
+//components and pages
+import Home from './pages/Home'
 
 
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(loadCuisine());
-  });
-  return (
+  return(
     <div className="App">
       <h1>Chow Better</h1>
+      <Home />
     </div>
   );
 }

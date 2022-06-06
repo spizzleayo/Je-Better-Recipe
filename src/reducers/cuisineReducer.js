@@ -1,3 +1,6 @@
+/*import { createReducer } from "@reduxjs/toolkit";
+import { addCuisine } from "../actions/cuisineAction";
+
 const initState = {
     africanCuisine : [],
     americanCuisine: [],
@@ -5,7 +8,10 @@ const initState = {
     britishCuisine: []
 }
 
-const cuisineReducer = (state=initState, action) => {
+
+
+
+/*const cuisineReducer = (state=initState, action) => {
        switch(action.type){
           case "FETCH_CUISINE":
               return {...state, 
@@ -22,4 +28,4 @@ const cuisineReducer = (state=initState, action) => {
 }
 
 
-export default cuisineReducer;
+export default cuisineReducer;*/

@@ -1,5 +1,7 @@
 import axios from "axios";
 
+/*import { createAction } from '@reduxjs/toolkit';
+
 import { africanCuisineURL, 
     americanCuisineURL, 
     italianCuisineURL,
@@ -8,7 +10,11 @@ import { africanCuisineURL,
 
 //action creator
 
- export const loadCuisine = () => async (dispatch) => {
+export const addCuisine = createAction('addCuisine')  
+
+
+
+ /*export const loadCuisine = () => async (dispatch) => {
     //fetch axios
     const africanData = await axios.get(africanCuisineURL());
     const americanData = await axios.get(americanCuisineURL());
@@ -23,4 +29,5 @@ import { africanCuisineURL,
             british: britishData.data.results
         },
     });
- };
+ };*/
+
