@@ -4,7 +4,7 @@ import cuisineSlice from "./features/cuisineSlice";
 
 const store = configureStore({
     reducer: {
-        cuisine: cuisineSlice.reducer,
+        cuisine: cuisineSlice.reducer, 
     },
 });
 

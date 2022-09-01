@@ -8,20 +8,17 @@ const italianCuisineURL = "https://api.spoonacular.com/recipes/complexSearch?api
 const britishCuisineURL = "https://api.spoonacular.com/recipes/complexSearch?apiKey=fc36a20745294176a54a31a6d1f36341&cuisine=british&number=6";
 
 
-export const getCuisine = createAsyncThunk("data", async(arg, {
-    rejectWithValue}) => {
-    try {
-        const datas = 
-         await axios.get(africanCuisineURL) 
-         await axios.get(americanCuisineURL)
-         await axios.get(italianCuisineURL)
-         await axios.get(britishCuisineURL)
-            
-    return datas;
-    } catch (error) {
-       rejectWithValue(error.response.data);
-    }
-});
+export const getCuisine = createAsyncThunk("data", async () => {
+   
+  const data = 
+    await axios.get (africanCuisineURL,
+    americanCuisineURL,
+    italianCuisineURL,
+    britishCuisineURL)
+
+    return data;
+     }
+);
 
     
 

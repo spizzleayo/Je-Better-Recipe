@@ -1,5 +1,5 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import axios from "axios";
+import { createSlice } from '@reduxjs/toolkit';
+import { getCuisine } from './api';
 
 const cuisineSlice = createSlice({
     name: "cuisine",
@@ -9,11 +9,11 @@ const cuisineSlice = createSlice({
     italianCuisine: [],
     britishCuisine: [],
     },
-  /* reducers: {},
-    extraReducers: {
+    reducers: {},
+     extraReducers: {
         [getCuisine.pending] : (state, { payload }) => {
             state.loading = true;
-           // state.data = payload;
+            state.data = payload;
         },
         [getCuisine.fulfilled] : (state, { payload }) => {
             state.loading = false;
@@ -24,8 +24,9 @@ const cuisineSlice = createSlice({
             state.message = payload;
             state.loading = false;
             state.isSuccess = false;
-        }, */
+        }, 
+      } 
     });
-//});
+
 
 export default cuisineSlice;
