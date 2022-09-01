@@ -1,32 +1,30 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { getCuisine } from './api';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { getCuisine } from "./api";
+
+/*export const getCuisine = createAsyncThunk("cuisine/getCuisine", async () => {
+    return axios
+      .get( )
+      .then((res) => res.data);
+  }); */
 
 const cuisineSlice = createSlice({
-    name: "cuisine",
-    initialState: {
-    africanCuisine : [],
+  name: "cuisine",
+  initialState: {
+    africanCuisine: [],
     americanCuisine: [],
     italianCuisine: [],
     britishCuisine: [],
-    },
-    reducers: {},
-     extraReducers: {
-        [getCuisine.pending] : (state, { payload }) => {
-            state.loading = true;
-            state.data = payload;
-        },
-        [getCuisine.fulfilled] : (state, { payload }) => {
-            state.loading = false;
-            state.data = payload;
-            state.isSuccess = true;
-        },
-        [getCuisine.rejected] : (state, { payload }) => {
-            state.message = payload;
-            state.loading = false;
-            state.isSuccess = false;
-        }, 
-      } 
+  },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(getCuisine.pending, (state) => {
+      state.loading = [];
     });
 
+    builder.addCase(getCuisine.fulfilled, (state, action) => {
+      state.entities = action.payload.data;
+    });
+  },
+});
 
 export default cuisineSlice;
